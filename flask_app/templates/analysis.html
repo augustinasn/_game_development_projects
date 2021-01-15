@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="vertical-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <p>
+                    <a href="{{ url_for('analytics_easy_load') }}" class="btn btn-long-lg btn-warning" style="font-size: large">
+                        <br/>
+                        Lengvas
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-sm'>
+                <p>
+                    <a href="{{ url_for('analytics_hard_load') }}" class="btn btn-long-lg btn-danger" style="font-size: large">
+                        <br/>
+                        Sunkus
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

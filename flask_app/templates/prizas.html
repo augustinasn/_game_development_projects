@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- <div id="heading_div">
+    <p><strong>Rinkties kategoriją:</strong></p>
+</div> -->
+
+
+<div class="container">
+    <div style="height: 300px">
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="container card">
+                <div class='card-body text-center'>
+                    <div class='card-text text-center'>
+                        <p><strong>Tavo prizas:</strong></p>
+                        <p>{{ prize }}.</p>
+                    </div>
+                    <div class='btn btn-lg btn-primary text-center mt-3'>
+                        <a href="{{ url_for('mystery_box') }}" style="color: white"> Grįžti į pradžią. </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock content %}

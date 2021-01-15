@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- <div id="heading_div">
+    <p><strong>Rinkties kategoriją:</strong></p>
+</div> -->
+
+<div style="height:200px"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p>
+            <a href="{{ url_for('insurance_load') }}" class="btn btn-sq-lg btn-primary" style="padding: 25%; font-size: large">
+                <br/>
+                <i class="far fa-building fa-9x"></i>
+                <br/>
+                <br/>
+                Draudimas
+            </a>
+            </p>
+        </div>
+
+        <div class='col-sm'>
+            <p>
+                <a href="{{ url_for('analytics') }}" class="btn btn-sq-lg btn-success" style="padding: 25%; font-size: large">
+                    <br/>
+                    <i class="fas fa-chart-line fa-9x"></i>
+                    <br/>
+                    <br/>
+                    Analitika
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

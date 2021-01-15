@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style>
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-card {
+    background-color: transparent;
+    width: 900px;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+
+    /* .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    } */
+
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    }
+
+    .v_center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+
+    #q {
+    font-size: 20px;
+    }
+
+    #q a {
+    color: white;
+    }
+
+</style>
+
+<script>
+    function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+        break;
+        }
+    }
+    }
+</script>
+
+<div class="flip-card v_center">
+        <div id="target" class="flip-card-inner">
+            <div class="flip-card-front center">
+                <i class="fas fa-question fa-9x" style="padding-top: 20%; padding-bottom: 10%"></i>
+            </div>
+
+            <div class="flip-card-back center">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-sm-12 my-auto">
+                            <div id="q">
+                                {{ q | safe }}
+                                <br>
+                                <button class="btn brn-lg btn-success" style="margin-top: 30px" onClick="document.getElementById('q').innerHTML = '<a href={{url_for('''show_answer''', q=q, a=a)}}>Rodyti atsakymą.</a>'
+                                                                                                        document.getElementById('but').textContent = 'PABAIGA';
+                                                                                                        document.getElementById('but').id = 'finished_but';">
+                                    Žinau atsakymą!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <button id="but" type="button" class="btn btn-danger btn-lg" onclick="getElementById('target').style.transform = 'rotateY(180deg)'
+                                                                                  document.getElementById('but').disabled = true;
+                                                                                  var countDownDate = new Date().getTime() + 60000 * 5;
+                                                                                  var x = setInterval(function() {
+                                                                                    var now = new Date().getTime();
+                                                                                    var distance = countDownDate - now;
+                                                                                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                                                                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                                                                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                                                                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                                                                    document.getElementById('but').textContent = minutes + 'm ' + seconds + 's ';
+
+                                                                                    if (distance < 0) {
+                                                                                        clearInterval(x);
+                                                                                        document.getElementById('but').textContent = 'PABAIGA';
+                                                                                        sleep(1500)
+                                                                                        document.getElementById('q').innerHTML = '<a href={{url_for('''show_answer''', q=q, a=a)}}>Rodyti atsakymą.</a>';
+                                                                                    }
+                                                                                    }, 1000);">
+            Rodyti klausimą</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
