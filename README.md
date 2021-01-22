@@ -23,6 +23,7 @@ Windows / Linux (Pip):
 
 - [Python](https://www.python.org) - Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace;
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions;
+- [Firebase](https://firebase.google.com) - Firebase is a platform developed by Google for creating mobile and web applications. It was originally an independent company founded in 2011. In 2014, Google acquired the platform and it is now their flagship offering for app development. 
 
 ## Meta:
 
