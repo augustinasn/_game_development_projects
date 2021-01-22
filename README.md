@@ -10,7 +10,7 @@
 </table>
 
 ## Demo:
-A working demo - :  
+A working demo - 
 
 ## Installation:
 
