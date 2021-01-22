@@ -20,6 +20,6 @@
 
 ## Meta:
 
-- Author - Augustinas Naina ([email](augustinasnaina@gmail.com), [LinkedIn](https://www.linkedin.com/in/augustinasn/));
+- Author - Augustinas Naina ([email](mailto:augustinasnaina@gmail.com), [LinkedIn](https://www.linkedin.com/in/augustinasn/));
 - License - [MIT](https://github.com/augustinasn/_game_development_projects/blob/master/LICENSE);
 - Cover image by <a href='https://unsplash.com/@villxsmil'>Luis Villasmil</a>.
