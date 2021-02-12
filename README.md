@@ -1,4 +1,6 @@
 <img src="https://unsplash.com/photos/ITFwHdPEED0/download?force=true&w=640" />
+<img src='http://drive.google.com/uc?export=view&id=1q6FHTWPGtf6PMhDikAKICSBFsr1G_4cF' alt='Game Development Projects (Monorepo)'/>
+
 
 # Game Development Projects (Monorepo)
 
@@ -21,5 +23,5 @@
 ## Meta:
 
 - Author - Augustinas Naina ([email](mailto:augustinasnaina@gmail.com), [LinkedIn](https://www.linkedin.com/in/augustinasn/));
-- License - [MIT](https://github.com/augustinasn/_game_development_projects/blob/master/LICENSE);
+- License - [GPLv3](https://github.com/augustinasn/_game_development_projects/blob/master/LICENSE);
 - Cover image by <a href='https://unsplash.com/@villxsmil'>Luis Villasmil</a>.
